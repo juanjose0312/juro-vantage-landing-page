@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juro Vantage | Clarity in Every Step</title>
+    <meta name="description" content="Firma consultora integral para transportistas. Seguros, cumplimiento, salud e inversiones.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="#">
+                    <img src="assets/logo.png" alt="Juro Vantage Logo" class="logo-img">
+                </a>
+            </div>
+            
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link" data-i18n="nav.home">Inicio</a></li>
+                    <li class="nav-item-dropdown">
+                        <a href="#services" class="nav-link" data-i18n="nav.services">Servicios <i class="fas fa-chevron-down dropdown-caret"></i></a>
+                        <div class="nav-dropdown">
+                            <ul>
+                                <li><a href="#svc-commercial" class="dropdown-link"><i class="fas fa-truck"></i> <span data-i18n="services.commercial.title">Seguros Comerciales</span></a></li>
+                                <li><a href="#svc-auto" class="dropdown-link"><i class="fas fa-car"></i> <span data-i18n="services.auto.title">Auto Personal</span></a></li>
+                                <li><a href="#svc-health" class="dropdown-link"><i class="fas fa-heartbeat"></i> <span data-i18n="services.health.title">Soluciones de Salud</span></a></li>
+                                <li><a href="#svc-life" class="dropdown-link"><i class="fas fa-hand-holding-heart"></i> <span data-i18n="services.life.title">Seguros de Vida</span></a></li>
+                                <li><a href="#svc-investments" class="dropdown-link"><i class="fas fa-chart-pie"></i> <span data-i18n="services.investments.title">Inversiones y Logística</span></a></li>
+                                <li><a href="#svc-compliance" class="dropdown-link"><i class="fas fa-balance-scale"></i> <span data-i18n="services.compliance.title">Cumplimiento Normativo</span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#about" class="nav-link" data-i18n="nav.about">Nosotros</a></li>
+                    <li><a href="#partners" class="nav-link" data-i18n="nav.partners">Aliados</a></li>
+                    <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contacto</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <div class="language-selector">
+                    <button class="lang-btn active" data-lang="es">ES</button>
+                    <span class="lang-divider">|</span>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+                <a href="#contact" class="btn btn-primary" data-i18n="btn.schedule">Cotizar Ahora</a>
+                
+                <button class="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">CLARITY IN EVERY STEP.</h1>
+                <p class="hero-subtitle" data-i18n="hero.subtitle">Firma consultora integral para el sector transportista. Más allá de los seguros, impulsamos el crecimiento estructurado de su negocio.</p>
+                <div class="hero-buttons">
+                    <a href="tel:+16452310310" class="btn btn-primary" data-i18n="btn.quote">Conectar</a>
+                    <a href="https://wa.me/1234567890" class="btn btn-outline" target="_blank">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition -->
+    <section id="about" class="value-prop section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title" data-i18n="value.title">No somos una agencia tradicional</h2>
+                <div class="divider"></div>
+                <p class="section-desc" data-i18n="value.desc">Nos posicionamos como una firma consultora que acompaña al cliente en todo su ecosistema.</p>
+            </div>
+            
+            <div class="value-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 data-i18n="value.card1.title">Protección Integral</h3>
+                    <p data-i18n="value.card1.desc">Mejoramos la calidad y el precio de sus seguros, asegurando la cobertura exacta que necesita sin sobrecostos.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 data-i18n="value.card2.title">Crecimiento Estructurado</h3>
+                    <p data-i18n="value.card2.desc">Acompañamiento continuo con consultores especializados para garantizar el crecimiento de su empresa.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3 data-i18n="value.card3.title">Cumplimiento Normativo</h3>
+                    <p data-i18n="value.card3.desc">Mantenemos su score sano y evitamos penalizaciones a través de asesoría experta en regulaciones.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services section bg-dark">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="services.title">Soluciones Corporativas</h2>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Service 1: Commercial Insurance -->
+                <div class="service-card" id="svc-commercial">
+                    <div class="service-img-wrap">
+                        <div class="service-overlay"></div>
+                        <i class="fas fa-truck service-icon-large"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3 data-i18n="services.commercial.title">Seguros Comerciales</h3>
+                        <p data-i18n="services.commercial.desc">Coberturas especializadas para carga, responsabilidad civil y daño físico, diseñadas para el mercado transportista.</p>
+                        <a href="#" class="service-link" data-i18n="btn.learn_more">Saber más <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 2: Auto Personal -->
+                <div class="service-card" id="svc-auto">
+                    <div class="service-img-wrap">
+                        <div class="service-overlay"></div>
+                        <i class="fas fa-car service-icon-large"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3 data-i18n="services.auto.title">Auto Personal</h3>
+                        <p data-i18n="services.auto.desc">Protección completa para sus vehículos personales con coberturas a la medida y tarifas competitivas.</p>
+                        <a href="#" class="service-link" data-i18n="btn.learn_more">Saber más <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 3: Health Insurance -->
+                <div class="service-card" id="svc-health">
+                    <div class="service-img-wrap">
+                        <div class="service-overlay"></div>
+                        <i class="fas fa-heartbeat service-icon-large"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3 data-i18n="services.health.title">Soluciones de Salud</h3>
+                        <p data-i18n="services.health.desc">Asesoría en Healthcare, Medicare y Medicaid para proteger lo más importante: usted y su familia.</p>
+                        <a href="#" class="service-link" data-i18n="btn.learn_more">Saber más <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 4: Life Insurance -->
+                <div class="service-card" id="svc-life">
+                    <div class="service-img-wrap">
+                        <div class="service-overlay"></div>
+                        <i class="fas fa-hand-holding-heart service-icon-large"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3 data-i18n="services.life.title">Seguros de Vida</h3>
+                        <p data-i18n="services.life.desc">Planes de vida que garantizan la tranquilidad y el futuro financiero de su familia.</p>
+                        <a href="#" class="service-link" data-i18n="btn.learn_more">Saber más <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 5: Investments & Logistics -->
+                <div class="service-card" id="svc-investments">
+                    <div class="service-img-wrap">
+                        <div class="service-overlay"></div>
+                        <i class="fas fa-chart-pie service-icon-large"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3 data-i18n="services.investments.title">Inversiones y Logística</h3>
+                        <p data-i18n="services.investments.desc">Compra/venta de camiones, consecución de cargas con grandes brokers e inversión en el exterior.</p>
+                        <a href="#" class="service-link" data-i18n="btn.learn_more">Saber más <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Service 6: Compliance -->
+                <div class="service-card" id="svc-compliance">
+                    <div class="service-img-wrap">
+                        <div class="service-overlay"></div>
+                        <i class="fas fa-balance-scale service-icon-large"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3 data-i18n="services.compliance.title">Cumplimiento Normativo</h3>
+                        <p data-i18n="services.compliance.desc">Formación de compañías, auditorías DOT, permisos y mantenimiento de un historial operativo impecable.</p>
+                        <a href="#" class="service-link" data-i18n="btn.learn_more">Saber más <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section id="partners" class="partners section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title" data-i18n="partners.title">Broker Partners</h2>
+                <div class="divider"></div>
+                <p class="section-desc" data-i18n="partners.desc">Trabajamos con los principales brokers del país.</p>
+            </div>
+            
+            <div class="partners-carousel">
+                <div class="partner-track">
+                    <div class="partner-logo"><img src="assets/partners/amazon-relay.svg" alt="Amazon Relay"></div>
+                    <div class="partner-logo"><img src="assets/partners/ch-robinson.svg" alt="C.H. Robinson"></div>
+                    <div class="partner-logo"><img src="assets/partners/jb-hunt.svg" alt="J.B. Hunt 360"></div>
+                    <div class="partner-logo"><img src="assets/partners/landstar.svg" alt="Landstar"></div>
+                    <div class="partner-logo"><img src="assets/partners/tql.svg" alt="TQL"></div>
+                    <div class="partner-logo"><img src="assets/partners/trinity-logistics.png" alt="Trinity Logistics"></div>
+                    <!-- Duplicated set for the seamless infinite loop -->
+                    <div class="partner-logo" aria-hidden="true"><img src="assets/partners/amazon-relay.svg" alt=""></div>
+                    <div class="partner-logo" aria-hidden="true"><img src="assets/partners/ch-robinson.svg" alt=""></div>
+                    <div class="partner-logo" aria-hidden="true"><img src="assets/partners/jb-hunt.svg" alt=""></div>
+                    <div class="partner-logo" aria-hidden="true"><img src="assets/partners/landstar.svg" alt=""></div>
+                    <div class="partner-logo" aria-hidden="true"><img src="assets/partners/tql.svg" alt=""></div>
+                    <div class="partner-logo" aria-hidden="true"><img src="assets/partners/trinity-logistics.png" alt=""></div>
+                </div>
+            </div>
+            
+            <div class="partners-cta text-center">
+                <a href="#" class="btn btn-outline" data-i18n="btn.learn_more">Saber más</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section bg-dark">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2 class="section-title" data-i18n="contact.title">Impulse su negocio hoy</h2>
+                    <div class="divider left"></div>
+                    <p class="contact-desc" data-i18n="contact.desc">Déjenos sus datos y uno de nuestros consultores especializados se pondrá en contacto con usted para una asesoría personalizada.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Oficinas Principales</h4>
+                                <p>Texas (TX) & Florida (FL)</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>info@jurovantage.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h4>Teléfono</h4>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <form class="contact-form" id="leadForm">
+                        <div class="form-group">
+                            <label for="name" data-i18n="form.name">Nombre Completo</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company" data-i18n="form.company">Nombre de la Compañía</label>
+                            <input type="text" id="company">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" data-i18n="form.phone">Teléfono</label>
+                            <input type="tel" id="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-i18n="form.email">Correo Electrónico</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service" data-i18n="form.service">Servicio de Interés</label>
+                            <select id="service">
+                                <option value="commercial" data-i18n="form.opt1">Seguros Comerciales</option>
+                                <option value="auto" data-i18n="form.opt2">Auto Personal</option>
+                                <option value="salud" data-i18n="form.opt3">Soluciones de Salud</option>
+                                <option value="vida" data-i18n="form.opt4">Seguros de Vida</option>
+                                <option value="inversiones" data-i18n="form.opt5">Inversiones y Logística</option>
+                                <option value="compliance" data-i18n="form.opt6">Cumplimiento Normativo</option>
+                                <option value="otros" data-i18n="form.opt7">Otros</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block" data-i18n="btn.submit">Solicitar Asesoría</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="assets/logo.png" alt="Juro Vantage" class="footer-logo">
+                    <p class="footer-slogan">CLARITY IN EVERY STEP.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4 data-i18n="footer.links">Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="#home" data-i18n="nav.home">Inicio</a></li>
+                        <li><a href="#services" data-i18n="nav.services">Servicios</a></li>
+                        <li><a href="#about" data-i18n="nav.about">Nosotros</a></li>
+                        <li><a href="#contact" data-i18n="nav.contact">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-services">
+                    <h4 data-i18n="footer.services">Servicios</h4>
+                    <ul>
+                        <li><a href="#svc-commercial" data-i18n="services.commercial.title">Seguros Comerciales</a></li>
+                        <li><a href="#svc-auto" data-i18n="services.auto.title">Auto Personal</a></li>
+                        <li><a href="#svc-health" data-i18n="services.health.title">Soluciones de Salud</a></li>
+                        <li><a href="#svc-life" data-i18n="services.life.title">Seguros de Vida</a></li>
+                        <li><a href="#svc-investments" data-i18n="services.investments.title">Inversiones y Logística</a></li>
+                        <li><a href="#svc-compliance" data-i18n="services.compliance.title">Cumplimiento Normativo</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Juro Vantage LLC. <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
+                <div class="legal-links">
+                    <a href="#" data-i18n="footer.privacy">Política de Privacidad</a>
+                    <a href="#" data-i18n="footer.terms">Términos de Servicio</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
