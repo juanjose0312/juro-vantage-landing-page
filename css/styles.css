@@ -358,10 +358,20 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     position: relative;
     background: linear-gradient(135deg, var(--color-primary) 0%, #1a2235 100%);
-    /* Aquí iría la imagen de fondo: background-image: url('../assets/hero-bg.jpg'); */
     background-size: cover;
     background-position: center;
     padding-top: 80px; /* Offset for header */
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
 }
 
 .hero-overlay {
@@ -371,11 +381,12 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     height: 100%;
     background: linear-gradient(to right, rgba(10, 14, 23, 0.9) 0%, rgba(10, 14, 23, 0.6) 100%);
+    z-index: 1;
 }
 
 .hero-container {
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 .hero-content {

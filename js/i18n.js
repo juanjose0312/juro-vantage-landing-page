@@ -1,4 +1,4 @@
-const translations = {
+const translations = window.translations = {
     es: {
         "nav.home": "Inicio",
         "nav.services": "Servicios",
