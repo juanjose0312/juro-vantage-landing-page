@@ -2,19 +2,19 @@
    Variables y Sistema de Diseño (Basado en Logo)
    ========================================================================== */
    :root {
-    /* Colores Principales (Oscuros) */
-    --color-primary: #0a0e17; /* Azul marino muy profundo / casi negro del fondo del logo */
-    --color-primary-light: #151a28; /* Variación un poco más clara para tarjetas */
-    --color-accent: #d4af37; /* Dorado metálico del logo */
-    --color-accent-hover: #f2c94c; /* Dorado más brillante para hovers */
+    /* Colores Principales */
+    --color-primary: #041C4A;
+    --color-primary-light: #072466;
+    --color-accent: #D4AF37;
+    --color-accent-hover: #f2c94c;
     
     /* Colores Modo Claro (Fondos) */
-    --color-bg-light: #ffffff;
-    --color-bg-alt: #f8f9fa;
+    --color-bg-light: #FFFFFF;
+    --color-bg-alt: #F3F5F7;
     
     /* Colores de Texto */
-    --color-text-dark: #1a1a1a;
-    --color-text-dark-muted: #555555;
+    --color-text-dark: #041C4A;
+    --color-text-dark-muted: #4a5568;
     --color-text-light: #ffffff;
     --color-text-light-muted: #a0aabf;
     
@@ -179,17 +179,17 @@ h1, h2, h3, h4, h5, h6 {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(10, 14, 23, 0.95);
+    background-color: rgba(255, 255, 255, 0.97);
     backdrop-filter: blur(10px);
     z-index: 1000;
     padding: 1rem 0;
-    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.25);
     transition: var(--transition-fast);
 }
 
 .header.scrolled {
     padding: 0.5rem 0;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 20px rgba(4, 28, 74, 0.12);
 }
 
 .header-container {
@@ -199,10 +199,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .logo-img {
-    height: 50px;
-    width: 50px;
-    object-fit: cover;
-    border-radius: 50%; /* Recorta el fondo cuadrado y deja el logo circular */
+    height: 72px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 0;
 }
 
 .nav-list {
@@ -216,7 +216,12 @@ h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
     letter-spacing: 1px;
     position: relative;
-    color: var(--color-text-light);
+    color: var(--color-accent);
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--color-primary);
 }
 
 .nav-link::after {
@@ -324,7 +329,7 @@ h1, h2, h3, h4, h5, h6 {
 .lang-btn {
     background: none;
     border: none;
-    color: var(--color-text-light-muted);
+    color: var(--color-primary);
     cursor: pointer;
     font-family: inherit;
     font-weight: 600;
@@ -336,14 +341,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .lang-divider {
-    color: var(--color-text-light-muted);
+    color: var(--color-accent);
 }
 
 .mobile-toggle {
     display: none;
     background: none;
     border: none;
-    color: var(--color-text-light);
+    color: var(--color-primary);
     font-size: 1.5rem;
     cursor: pointer;
 }
@@ -357,7 +362,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     position: relative;
-    background: linear-gradient(135deg, var(--color-primary) 0%, #1a2235 100%);
+    background: linear-gradient(135deg, var(--color-primary) 0%, #072466 100%);
     background-size: cover;
     background-position: center;
     padding-top: 80px; /* Offset for header */
@@ -380,7 +385,7 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, rgba(10, 14, 23, 0.9) 0%, rgba(10, 14, 23, 0.6) 100%);
+    background: linear-gradient(to right, rgba(4, 28, 74, 0.9) 0%, rgba(4, 28, 74, 0.6) 100%);
     z-index: 1;
 }
 
@@ -475,15 +480,93 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
+   Stats Bar
+   ========================================================================== */
+.stats-bar {
+    background-color: var(--color-primary);
+    padding: 2.5rem 0;
+    border-top: 3px solid var(--color-accent);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    line-height: 1.2;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--color-text-light-muted);
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+}
+
+/* ==========================================================================
    Servicios (Soluciones Corporativas)
    ========================================================================== */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+.services-carousel {
+    overflow: hidden;
+    padding: 2rem 0;
+    position: relative;
+}
+
+.services-carousel::before,
+.services-carousel::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.services-carousel::before {
+    left: 0;
+    background: linear-gradient(to right, var(--color-primary) 0%, transparent 100%);
+}
+
+.services-carousel::after {
+    right: 0;
+    background: linear-gradient(to left, var(--color-primary) 0%, transparent 100%);
+}
+
+.services-track {
+    display: flex;
+    align-items: stretch;
     gap: 2rem;
+    width: max-content;
+    animation: services-scroll 40s linear infinite;
+}
+
+.services-carousel:hover .services-track {
+    animation-play-state: paused;
+}
+
+@keyframes services-scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-50% - 1rem));
+    }
 }
 
 .service-card {
+    width: 300px;
+    flex-shrink: 0;
     background-color: var(--color-primary-light);
     border-radius: 8px;
     overflow: hidden;
@@ -704,7 +787,7 @@ h1, h2, h3, h4, h5, h6 {
    Footer
    ========================================================================== */
 .footer {
-    background-color: #030407;
+    background-color: #020e2a;
     padding: 4rem 0 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     color: var(--color-text-light);
@@ -718,10 +801,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer-logo {
-    height: 60px;
-    width: 60px;
-    object-fit: cover;
-    border-radius: 50%;
+    height: 70px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 0;
     margin-bottom: 1rem;
 }
 
@@ -852,17 +935,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .stat-number {
+        font-size: 2.2rem;
+    }
+
     .nav-menu {
         position: fixed;
         top: 80px;
         left: -100%;
         width: 100%;
         height: calc(100vh - 80px);
-        background-color: var(--color-primary);
+        background-color: #ffffff;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         transition: var(--transition-fast);
+        box-shadow: 0 10px 30px rgba(4, 28, 74, 0.1);
     }
     
     .nav-menu.active {
@@ -877,6 +970,7 @@ h1, h2, h3, h4, h5, h6 {
     
     .nav-link {
         font-size: 1.2rem;
+        color: var(--color-accent);
     }
     
     /* En móvil el dropdown se muestra estático dentro del menú */
@@ -900,6 +994,7 @@ h1, h2, h3, h4, h5, h6 {
         justify-content: center;
         font-size: 0.95rem;
         padding: 0.4rem 1rem;
+        color: var(--color-accent);
     }
     
     .dropdown-link:hover {

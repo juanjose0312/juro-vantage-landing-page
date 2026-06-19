@@ -61,7 +61,7 @@ Object.assign(window.translations.es, {
     "commercial.process.2.desc": "Cotizamos en múltiples mercados el mismo día.",
     "commercial.process.3.title": "Implementación",
     "commercial.process.3.desc": "Colocamos la cobertura y gestionamos toda la documentación.",
-    "commercial.process.4.title": "Soporte Continuo",
+    "commercial.process.4.title": "Account Service",
     "commercial.process.4.desc": "COIs, endosos, renovaciones y asistencia en reclamaciones.",
 
     "auto.hero.label": "Seguro Auto Personal",
@@ -303,7 +303,7 @@ Object.assign(window.translations.en, {
     "commercial.process.2.desc": "Same-day market shopping across multiple carriers.",
     "commercial.process.3.title": "Implementation",
     "commercial.process.3.desc": "We place coverage and manage all documentation.",
-    "commercial.process.4.title": "Ongoing Support",
+    "commercial.process.4.title": "Account Service",
     "commercial.process.4.desc": "COIs, endorsements, renewals, and claims assistance.",
 
     "auto.hero.label": "Personal Auto Insurance",
