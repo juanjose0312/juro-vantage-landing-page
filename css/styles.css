@@ -420,7 +420,109 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
-   Propuesta de Valor
+   About Us
+   ========================================================================== */
+.about-lead {
+    max-width: 800px;
+}
+
+.about-pillars {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin: 2.5rem 0;
+}
+
+.about-pillar {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    background-color: var(--color-bg-alt);
+    border-radius: 8px;
+    border: 1px solid rgba(4, 28, 74, 0.08);
+    transition: var(--transition-fast);
+}
+
+.about-pillar:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(4, 28, 74, 0.08);
+}
+
+.about-pillar i {
+    font-size: 2rem;
+    color: var(--color-accent);
+    margin-bottom: 0.75rem;
+    display: block;
+}
+
+.about-pillar span {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-text-dark);
+    line-height: 1.4;
+}
+
+.about-approach,
+.about-scenarios {
+    color: var(--color-text-dark-muted);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto 2rem;
+    text-align: center;
+}
+
+.mission-callout {
+    background-color: var(--color-bg-alt);
+    border-left: 4px solid var(--color-accent);
+    border-radius: 0 8px 8px 0;
+    padding: 2rem 2.5rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+.mission-label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-text-dark-muted);
+    margin-bottom: 0.75rem;
+}
+
+.mission-quote {
+    font-family: var(--font-secondary);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    line-height: 1.4;
+    margin-bottom: 0;
+}
+
+.about-closing {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(4, 28, 74, 0.1);
+}
+
+.about-closing p {
+    font-size: 1.1rem;
+    color: var(--color-text-dark-muted);
+    margin-bottom: 0.5rem;
+}
+
+.about-closing-highlight {
+    font-size: 1.4rem !important;
+    font-weight: 700;
+    color: var(--color-accent) !important;
+    margin-bottom: 0 !important;
+}
+
+/* ==========================================================================
+   Propuesta de Valor (legacy cards - kept for reference)
    ========================================================================== */
 .value-grid {
     display: grid;
@@ -940,6 +1042,10 @@ h1, h2, h3, h4, h5, h6 {
         gap: 1.5rem;
     }
 
+    .about-pillars {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .stat-number {
         font-size: 2.2rem;
     }
@@ -1016,6 +1122,18 @@ h1, h2, h3, h4, h5, h6 {
     
     .hero-buttons {
         flex-direction: column;
+    }
+
+    .about-pillars {
+        grid-template-columns: 1fr;
+    }
+
+    .mission-callout {
+        padding: 1.5rem;
+    }
+
+    .mission-quote {
+        font-size: 1.2rem;
     }
     
     .footer-grid {

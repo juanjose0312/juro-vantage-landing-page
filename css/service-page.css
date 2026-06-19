@@ -360,13 +360,57 @@
     color: var(--color-text-dark-muted);
 }
 
-.truck-types-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+.trucks-carousel {
+    overflow: hidden;
+    padding: 2rem 0;
+    position: relative;
+}
+
+.trucks-carousel::before,
+.trucks-carousel::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.trucks-carousel::before {
+    left: 0;
+    background: linear-gradient(to right, var(--color-primary) 0%, transparent 100%);
+}
+
+.trucks-carousel::after {
+    right: 0;
+    background: linear-gradient(to left, var(--color-primary) 0%, transparent 100%);
+}
+
+.trucks-track {
+    display: flex;
+    align-items: stretch;
     gap: 1.5rem;
+    width: max-content;
+    animation: trucks-scroll 35s linear infinite;
+}
+
+.trucks-carousel:hover .trucks-track {
+    animation-play-state: paused;
+}
+
+@keyframes trucks-scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-50% - 0.75rem));
+    }
 }
 
 .truck-type {
+    width: 160px;
+    flex-shrink: 0;
     text-align: center;
     padding: 1.5rem 1rem;
     background-color: var(--color-primary-light);
