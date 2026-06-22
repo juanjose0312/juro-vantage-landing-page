@@ -85,6 +85,66 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Services Carousel: manual controls + auto-advance
+    const servicesCarousel = document.querySelector('.services-carousel');
+    if (servicesCarousel) {
+        const track = servicesCarousel.querySelector('.services-track');
+        const prevBtn = servicesCarousel.querySelector('.carousel-btn.prev');
+        const nextBtn = servicesCarousel.querySelector('.carousel-btn.next');
+
+        const getStep = () => {
+            const card = track.querySelector('.service-card');
+            if (!card) return track.clientWidth;
+            const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+            return card.offsetWidth + gap;
+        };
+
+        const atEnd = () => track.scrollLeft + track.clientWidth >= track.scrollWidth - 5;
+
+        const advance = () => {
+            if (atEnd()) {
+                track.scrollTo({ left: 0, behavior: 'smooth' });
+            } else {
+                track.scrollBy({ left: getStep(), behavior: 'smooth' });
+            }
+        };
+
+        if (nextBtn) nextBtn.addEventListener('click', advance);
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => {
+                if (track.scrollLeft <= 5) {
+                    track.scrollTo({ left: track.scrollWidth, behavior: 'smooth' });
+                } else {
+                    track.scrollBy({ left: -getStep(), behavior: 'smooth' });
+                }
+            });
+        }
+
+        let autoplay = setInterval(advance, 4000);
+        const stopAutoplay = () => { clearInterval(autoplay); autoplay = null; };
+        const startAutoplay = () => { if (!autoplay) autoplay = setInterval(advance, 4000); };
+
+        servicesCarousel.addEventListener('mouseenter', stopAutoplay);
+        servicesCarousel.addEventListener('mouseleave', startAutoplay);
+        track.addEventListener('touchstart', stopAutoplay, { passive: true });
+    }
+
+    // Reveal on scroll (coverage bento and other .reveal elements)
+    const revealEls = document.querySelectorAll('.reveal, .coverage-card');
+    if (revealEls.length && 'IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+        revealEls.forEach(el => revealObserver.observe(el));
+    } else {
+        revealEls.forEach(el => el.classList.add('is-visible'));
+    }
+
     // FAQ Accordion (service pages)
     document.querySelectorAll('.faq-question').forEach(button => {
         button.addEventListener('click', () => {

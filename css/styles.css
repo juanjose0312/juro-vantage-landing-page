@@ -619,9 +619,8 @@ h1, h2, h3, h4, h5, h6 {
    Servicios (Soluciones Corporativas)
    ========================================================================== */
 .services-carousel {
-    overflow: hidden;
-    padding: 2rem 0;
     position: relative;
+    padding: 2rem 0;
 }
 
 .services-carousel::before,
@@ -629,7 +628,7 @@ h1, h2, h3, h4, h5, h6 {
     content: '';
     position: absolute;
     top: 0;
-    width: 100px;
+    width: 36px;
     height: 100%;
     z-index: 2;
     pointer-events: none;
@@ -649,20 +648,68 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: stretch;
     gap: 2rem;
-    width: max-content;
-    animation: services-scroll 40s linear infinite;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-bottom: 0.5rem;
 }
 
-.services-carousel:hover .services-track {
-    animation-play-state: paused;
+.services-track::-webkit-scrollbar {
+    display: none;
 }
 
-@keyframes services-scroll {
-    from {
-        transform: translateX(0);
+.service-card {
+    scroll-snap-align: start;
+}
+
+/* Carousel manual controls */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid var(--color-accent);
+    background-color: rgba(4, 28, 74, 0.85);
+    color: var(--color-accent);
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-fast);
+}
+
+.carousel-btn:hover {
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+}
+
+.carousel-btn.prev {
+    left: -12px;
+}
+
+.carousel-btn.next {
+    right: -12px;
+}
+
+@media (max-width: 768px) {
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
     }
-    to {
-        transform: translateX(calc(-50% - 1rem));
+
+    .carousel-btn.prev {
+        left: 0;
+    }
+
+    .carousel-btn.next {
+        right: 0;
     }
 }
 
