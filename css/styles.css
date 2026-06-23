@@ -199,7 +199,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .logo-img {
-    height: 72px;
+    height: 96px;
     width: auto;
     object-fit: contain;
     border-radius: 0;
@@ -211,7 +211,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-link {
-    font-size: 0.9rem;
+    font-size: 1.05rem;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -399,7 +399,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-title {
-    font-size: 4rem;
+    font-size: 4.75rem;
     font-weight: 700;
     color: var(--color-accent);
     margin-bottom: 1.5rem;
@@ -408,10 +408,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-subtitle {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: var(--color-text-light);
     margin-bottom: 2.5rem;
-    max-width: 600px;
+    max-width: 640px;
 }
 
 .hero-buttons {
@@ -620,34 +620,14 @@ h1, h2, h3, h4, h5, h6 {
    ========================================================================== */
 .services-carousel {
     position: relative;
-    padding: 2rem 0;
-}
-
-.services-carousel::before,
-.services-carousel::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    width: 36px;
-    height: 100%;
-    z-index: 2;
-    pointer-events: none;
-}
-
-.services-carousel::before {
-    left: 0;
-    background: linear-gradient(to right, var(--color-primary) 0%, transparent 100%);
-}
-
-.services-carousel::after {
-    right: 0;
-    background: linear-gradient(to left, var(--color-primary) 0%, transparent 100%);
+    padding: 2rem 5.5rem;
 }
 
 .services-track {
     display: flex;
     align-items: stretch;
     gap: 2rem;
+    width: 100%;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
@@ -661,7 +641,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .service-card {
+    flex: 0 0 calc((100% - 3 * 2rem) / 4);
     scroll-snap-align: start;
+    background-color: var(--color-primary-light);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: var(--transition-fast);
 }
 
 /* Carousel manual controls */
@@ -690,11 +676,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .carousel-btn.prev {
-    left: -12px;
+    left: 0.5rem;
 }
 
 .carousel-btn.next {
-    right: -12px;
+    right: 0.5rem;
+}
+
+@media (max-width: 992px) {
+    .services-carousel {
+        padding: 2rem 4.5rem;
+    }
+
+    .service-card {
+        flex: 0 0 calc((100% - 2rem) / 2);
+    }
 }
 
 @media (max-width: 768px) {
@@ -703,24 +699,16 @@ h1, h2, h3, h4, h5, h6 {
         height: 40px;
         font-size: 1rem;
     }
-
-    .carousel-btn.prev {
-        left: 0;
-    }
-
-    .carousel-btn.next {
-        right: 0;
-    }
 }
 
-.service-card {
-    width: 300px;
-    flex-shrink: 0;
-    background-color: var(--color-primary-light);
-    border-radius: 8px;
-    overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: var(--transition-fast);
+@media (max-width: 600px) {
+    .services-carousel {
+        padding: 2rem 3.5rem;
+    }
+
+    .service-card {
+        flex: 0 0 100%;
+    }
 }
 
 .service-card:hover {

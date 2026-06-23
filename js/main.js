@@ -92,12 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const prevBtn = servicesCarousel.querySelector('.carousel-btn.prev');
         const nextBtn = servicesCarousel.querySelector('.carousel-btn.next');
 
-        const getStep = () => {
-            const card = track.querySelector('.service-card');
-            if (!card) return track.clientWidth;
-            const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
-            return card.offsetWidth + gap;
-        };
+        const getStep = () => track.clientWidth;
 
         const atEnd = () => track.scrollLeft + track.clientWidth >= track.scrollWidth - 5;
 
